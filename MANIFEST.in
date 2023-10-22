@@ -1,3 +1,0 @@
-include src/docs/*
-include src/tests/*
-include logo.png
