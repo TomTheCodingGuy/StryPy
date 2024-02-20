@@ -6,7 +6,7 @@ StryPy
    :width: 600
    :alt: StryPy logo
    
-**StryPy** is a Python package to help developers work with strings quickly and effectively.
+**StryPy** v1.0.3 is a Python package to help developers work with strings quickly and effectively.
 It provides a huge range of functions and objects that can be used to manipulate strings in almost any way you want.
 The package also simplifies advanced string functions making them more accessable for the average programmer.
 To check out the full documentation visit the link near the bottom of this page.
