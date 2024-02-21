@@ -1,5 +1,5 @@
 =============
-StryPy v1.0.2
+StryPy v1.0.4
 =============
 
 .. image:: logo.png
