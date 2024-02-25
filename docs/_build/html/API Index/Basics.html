@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basics &mdash; StryPy  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sorting" href="Sorting.html" />
+    <link rel="prev" title="API Index" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            StryPy
+              <img src="../_static/icon.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Getting%20Started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Index</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#table-of-contents">Table of Contents:</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Basics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sp.add"><code class="docutils literal notranslate"><span class="pre">sp.add()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.subtract"><code class="docutils literal notranslate"><span class="pre">sp.subtract()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.remove"><code class="docutils literal notranslate"><span class="pre">sp.remove()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.join"><code class="docutils literal notranslate"><span class="pre">sp.join()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.split"><code class="docutils literal notranslate"><span class="pre">sp.split()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.splitdex"><code class="docutils literal notranslate"><span class="pre">sp.splitdex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.switch"><code class="docutils literal notranslate"><span class="pre">sp.switch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.switchchars"><code class="docutils literal notranslate"><span class="pre">sp.switchchars()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.switchdex"><code class="docutils literal notranslate"><span class="pre">sp.switchdex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.chars"><code class="docutils literal notranslate"><span class="pre">sp.chars()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.uniques"><code class="docutils literal notranslate"><span class="pre">sp.uniques()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.mesh"><code class="docutils literal notranslate"><span class="pre">sp.mesh()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.reverse"><code class="docutils literal notranslate"><span class="pre">sp.reverse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.length"><code class="docutils literal notranslate"><span class="pre">sp.length()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.count"><code class="docutils literal notranslate"><span class="pre">sp.count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sp.divchunks"><code class="docutils literal notranslate"><span class="pre">sp.divchunks()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Sorting.html">Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Clipboard.html">Clipboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Colour.html">Colour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Constants.html">Constant</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Generator.html">Generator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="File.html">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Testing-API.html">Testing API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">Contributing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">StryPy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Index</a></li>
+      <li class="breadcrumb-item active">Basics</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/API Index/Basics.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basics">
+<h1>Basics<a class="headerlink" href="#basics" title="Link to this heading"></a></h1>
+<p>StryPy includes many basic functions to aid users. Many of these do have extra parameters to elaborate on simple functions.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.add">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spaces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.add" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a concatenated string</em></p>
+<dl>
+<dt>This function takes any number of strings and returns them concatenated.By setting the <em>spaces</em> parameter to true the function will return the string with spaces between each string:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span><span class="s2">&quot;World&quot;</span><span class="p">,</span> <span class="n">spaces</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&#39;Hello World&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.subtract">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">subtract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.subtract" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a string with a certain number of characters removed off the end</em></p>
+<dl>
+<dt>This function removes a certain number of letters of the end of a string:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">&#39;Hello Wo&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.remove">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">removed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spaces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.remove" title="Link to this definition"></a></dt>
+<dd><p><em>Returns the string with a part removed</em></p>
+<dl>
+<dt>This function removes a string from a string, and can replace it with spaces by setting the <em>spaces</em> parameter to true:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">,</span> <span class="s2">&quot; World&quot;</span><span class="p">)</span>
+<span class="go">&#39;Hello&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.join">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">between</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.join" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a string made up of the ones in a list</em></p>
+<dl>
+<dt>This function takes a list of strings and joins it into one string.By setting the <em>between</em> parameter to string value, it will add that string between each between each of the list’s strings:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;World&quot;</span><span class="p">],</span> <span class="n">between</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>    <span class="c1"># Adds a space between each string.</span>
+<span class="go">&#39;Hello World&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.split">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Maxsplit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.split" title="Link to this definition"></a></dt>
+<dd><p><em>Returns list of strings derived from a string</em></p>
+<dl>
+<dt>This function takes a string and splits it into a list of parts. The default separator is a space and you can specify the maximum amount of times to split the string:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+<span class="go">[&quot;Hello&quot;, &quot;World]&quot;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.splitdex">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">splitdex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splitpoint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.splitdex" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a list of two parts of a string</em></p>
+<dl>
+<dt>This function takes a string and splits it into two parts at the index desired. It returns a list of the two parts:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">splitdex</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">[&quot;Hell&quot;, &quot;o World&quot;]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.switch">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">switch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oldstring</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newstring</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.switch" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a string with a replaced part</em></p>
+<dl>
+<dt>This function takes a string and replaces the <em>oldstring</em> part with the <em>newstring</em>:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">switch</span><span class="p">(</span><span class="s2">&quot;Hello There&quot;</span><span class="p">,</span> <span class="s2">&quot;There&quot;</span><span class="p">,</span> <span class="s2">&quot;World&quot;</span><span class="p">)</span>
+<span class="go">&#39;Hello World&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.switchchars">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">switchchars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.switchchars" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a string with a character replaced by another</em></p>
+<dl>
+<dt>This function takes a string and replaces every instance of the <em>old</em> character with the <em>new</em> character. It is case sensitive so ‘A’ is not the same as ‘a’:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">switchchars</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">,</span><span class="s2">&quot;l&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">)</span>
+<span class="go">&#39;Heddo Wordd&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.switchdex">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">switchdex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.switchdex" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a string with the character at an index replaced by another</em></p>
+<dl>
+<dt>This function takes a string and replaces the character at a specific index with a different character. To be userfriendly, you can count from 1, rather than 0 for the index:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">switchdex</span><span class="p">(</span><span class="s2">&quot;Gello World&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;H&quot;</span><span class="p">)</span>
+<span class="go">&#39;Hello World&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.chars">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">chars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.chars" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a list of characters</em></p>
+<dl>
+<dt>This function simply returns a list of each character of a string:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">chars</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+<span class="go">[&#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39; &#39;, &#39;W&#39;, &#39;o&#39;, &#39;r&#39;, &#39;l&#39;, &#39;d&#39;]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.uniques">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">uniques</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.uniques" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a list of the unique characters in a string</em></p>
+<dl>
+<dt>This function returns a list of all the unique characters in a string. It is case sensitive so ‘A’ is not the same as ‘a’:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">uniques</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+<span class="go">[&#39; &#39;, &#39;d&#39;, &#39;e&#39;, &#39;H&#39;, &#39;l&#39;, &#39;o&#39;, &#39;r&#39;, &#39;W&#39;]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.mesh">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">String2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.mesh" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a string of two strings meshed together</em></p>
+<dl>
+<dt>This function meshes/interweaves two strings:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">mesh</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;World&quot;</span><span class="p">)</span>
+<span class="go">&#39;HWeolrllod&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.reverse">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">reverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.reverse" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a reversed string</em></p>
+<dl>
+<dt>This function simply reverses a string:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">reverse</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+<span class="go">&#39;dlroW olleH&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.length">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.length" title="Link to this definition"></a></dt>
+<dd><p><em>Returns the length of a string</em></p>
+<dl>
+<dt>This function simply returns the length of a string:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="s2">&quot;Hello World)</span>
+<span class="go">11</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.count">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">letter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">String</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.count" title="Link to this definition"></a></dt>
+<dd><p><em>Returns the number of times a character appears in a string</em></p>
+<dl>
+<dt>This function simply returns amount of times a letter appears in a string. It is case sensitive so ‘A’ is not the same as ‘a’:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;l&quot;</span><span class="p">,</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sp.divchunks">
+<span class="sig-prename descclassname"><span class="pre">sp.</span></span><span class="sig-name descname"><span class="pre">divchunks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunksize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sp.divchunks" title="Link to this definition"></a></dt>
+<dd><p><em>Returns a list of strings</em></p>
+<dl>
+<dt>This function takes a string and divides it into chunks of a specified size. Any remainder will still be included:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">divchunks</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">[&quot;Hel&quot;,&quot;lo &quot;,&quot;Wor&quot;,&quot;ld&quot;]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="API Index" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Sorting.html" class="btn btn-neutral float-right" title="Sorting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, TomTheCodingGuy.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
